@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Monero Mining Guide (2025)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🛡️ Secure Monero Mining Guide (2025)</h1>
+    <p>by <strong>CyberleakTV</strong></p>
+  </header>
+
+  <section>
+    <h2>🔒 Why Monero?</h2>
+    <p>Monero (XMR) is a privacy-focused cryptocurrency that hides the sender, receiver, and amount of every transaction by default. It's the ideal coin for miners and users who prioritize financial privacy.</p>
+  </section>
+
+  <section>
+    <h2>1️⃣ Step One: Create a Secure Monero Wallet</h2>
+    <ol>
+      <li>Download the official <a href="https://www.getmonero.org/downloads/">Monero GUI Wallet</a> for your operating system.</li>
+      <li>Install and launch the wallet. Click <strong>"Create a new wallet"</strong>.</li>
+      <li>Choose a secure name and password.</li>
+      <li><strong>Write down your 25-word seed phrase</strong> on paper. DO NOT save it on your computer or cloud.</li>
+      <li>Optional: Save your keys to an <strong>encrypted USB drive</strong> (see Step 6).</li>
+    </ol>
+    <img src="images/walletcreation.png" alt="Monero wallet creation" style="max-width: 100%; height: auto; margin: 20px 0;">
+  </section>
+
+  <section>
+    <h2>2️⃣ Step Two: Run a Node (Optional)</h2>
+    <p>Monero can connect to remote nodes or run a local node for full privacy.</p>
+    <h3>🔗 Connecting to a Public Node:</h3>
+    <ul>
+      <li>Faster, easier setup</li>
+      <li>Some privacy trade-offs (your IP can be logged)</li>
+    </ul>
+    <p>Example trusted node: <code>node.moneroworld.com:18089</code></p>
+
+    <h3>🏠 Running Your Own Node:</h3>
+    <ol>
+      <li>Use the GUI wallet or download <code>monerod</code> separately</li>
+      <li>Run: <code>./monerod --detach</code></li>
+      <li>This will sync the blockchain (~100GB+)</li>
+    </ol>
+    <img src="images/monerod.webp" alt="monerod running in terminal" style="max-width: 100%; height: auto; margin: 20px 0;">
+  </section>
+
+  <section>
+    <h2>3️⃣ Step Three: Install XMRig</h2>
+    <ol>
+      <li>Visit <a href="https://github.com/xmrig/xmrig">XMRig GitHub</a></li>
+      <li>Download the latest release for your OS</li>
+      <li>Extract it to a secure folder</li>
+    </ol>
+    <img src="images/xmriggithub.png" alt="" style="max-width: 100%; height: auto; margin: 20px 0;">
+  </section>
+
+  <section>
+    <h2>4️⃣ Step Four: Configure XMRig</h2>
+    <p>You can edit <code>config.json</code> manually or use the <a href="https://xmrig.com/wizard">XMRig Config Wizard</a>.</p>
+
+    <h3>🔧 Manual Edit:</h3>
+    <ul>
+      <li><code>"url": "pool.supportxmr.com:3333"</code> — your mining pool</li>
+      <li><code>"user": "YOUR_MONERO_ADDRESS"</code> — your XMR address</li>
+      <li><code>"pass": "x"</code> — leave default unless pool says otherwise</li>
+      <li><code>"tls": true</code> — enables encrypted connection (recommended)</li>
+    </ul>
+
+    <p>Example config snippet:</p>
+    <pre><code>{
+  "autosave": true,
+  "cpu": true,
+  "pools": [
+    {
+      "url": "pool.supportxmr.com:443",
+      "user": "48zX...yourMoneroAddress...",
+      "pass": "x",
+      "tls": true
+    }
+  ]
+}</code></pre>
+    <img src="images/xmrconfig.jpg" alt="config.json example" style="max-width: 100%; height: auto; margin: 20px 0;">
+  </section>
+
+  <section>
+    <h2>5️⃣ Step Five: Securely Store Your Wallet</h2>
+    <p>To avoid theft or exposure:</p>
+    <ol>
+      <li>Copy your <code>.keys</code> file and seed phrase to an encrypted USB</li>
+      <li>Use VeraCrypt or LUKS to encrypt the drive</li>
+      <li>Disconnect the USB and store it offline in a secure place</li>
+    </ol>
+    <img src="images/veracrypt.png" alt="VeraCrypt encryption interface" style="max-width: 100%; height: auto; margin: 20px 0;">
+    <p>Never store your wallet keys on the same device you mine from!</p>
+  </section>
+
+  <section>
+    <h2>6️⃣ Step Six: Start Mining</h2>
+    <ol>
+      <li>Open terminal and navigate to your XMRig folder</li>
+      <li>Run: <code>./xmrig</code></li>
+      <li>Watch logs to ensure you're connecting and submitting shares</li>
+    </ol>
+    <img src="images/xmrig.jpg" alt="XMRig running in terminal" style="max-width: 100%; height: auto; margin: 20px 0;">
+  </section>
+
+  <section>
+    <h2>7️⃣ Pool vs. Solo Mining</h2>
+    <h3>⛏️ Pool Mining:</h3>
+    <ul>
+      <li>Steady, small payouts</li>
+      <li>Beginner-friendly</li>
+    </ul>
+
+    <h3>🧍 Solo Mining:</h3>
+    <ul>
+      <li>Needs your own full synced node</li>
+      <li>Rare, large payouts (only if you solve a block)</li>
+      <li>Use in <code>config.json</code>: <code>"url": "127.0.0.1:18081"</code></li>
+    </ul>
+    <img src="images/diagram.png" alt="Difference between solo vs. pool" style="max-width: 100%; height: auto; margin: 20px 0;">
+  </section>
+
+  <footer>
+    <p><strong>CyberleakTV</strong> — Your source for anonymous tech. Follow us on <a href="https://x.com/@Cyberleaktv" target="_blank">X/Twitter</a> or <a href="https://youtube.com/@cyberleaktv" target="_blank">YouTube</a>.</p>
+  </footer>
+</body>
+</html>
