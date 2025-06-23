@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Encrypt a Storage Device with VeraCrypt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <Header>
+      <h1>How to Encrypt a Storage Device with VeraCrypt</h1>
+    </Header>
+
+    <div>
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/itvt07b1Rvc?si=arFxOEg-NBjoDocE"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <p>Want to protect your files from theft, loss, or unauthorized access? In this guide, you'll learn how to encrypt
+      a storage device using <strong>VeraCrypt</strong> a free, open-source tool trusted by cybersecurity experts.
+      Whether you're on Linux, Windows, or macOS, this walkthrough uses the GUI so no terminal commands are needed.
+    </p>
+
+    <h2>What You’ll Need</h2>
+    <ul>
+      <li>A USB drive, external HDD/SSD, or storage device</li>
+      <li>A backup of your data (encryption will erase it)</li>
+      <li>VeraCrypt installed on your system</li>
+    </ul>
+
+    <h2>Step-by-Step Guide</h2>
+
+    <h3>1. Download and Install VeraCrypt</h3>
+    <p>Go to <a href="https://www.veracrypt.fr" target="_blank">veracrypt.fr</a> and download the Windows installer.
+      Run the installer and complete the setup.</p>
+
+    <h3>2. Launch VeraCrypt</h3>
+    <p>Open VeraCrypt from the Start menu or your desktop.</p>
+
+    <h3>3. Start Creating a Volume</h3>
+    <ul>
+      <li>Click <strong>Create Volume</strong></li>
+      <li>Select <strong>Encrypt a non-system partition/drive</strong></li>
+      <li>Choose <strong>Standard VeraCrypt volume</strong></li>
+    </ul>
+
+    <h3>4. Select Your Storage Device</h3>
+    <p>Click <strong>Select Device</strong> and choose the correct drive. <strong>Double-check!</strong> This will
+      erase the drive completely.</p>
+
+    <h3>5. Encryption Options</h3>
+    <p>Leave <strong>AES</strong> selected as the encryption algorithm and click <strong>Next</strong>.</p>
+
+    <h3>6. Set a Strong Password</h3>
+    <p>Use a strong, long password. VeraCrypt will warn you if it’s too short.</p>
+
+    <h3>7. Choose Filesystem and Format</h3>
+    <ul>
+      <li>Choose <code>FAT</code> for cross-platform, or <code>exFAT/NTFS</code> for large files on Windows</li>
+      <li>Enable <strong>Quick Format</strong> for faster setup (optional)</li>
+    </ul>
+
+    <h3>8. Generate Random Data</h3>
+    <p>Move your mouse randomly inside the window to generate encryption entropy. When full, click
+      <strong>Format</strong>.
+    </p>
+
+    <h3>9. Mount the Encrypted Volume</h3>
+    <ul>
+      <li>Back in VeraCrypt’s main window, select a drive letter</li>
+      <li>Click <strong>Select Device</strong> and choose your encrypted drive</li>
+      <li>Click <strong>Mount</strong> and enter your password</li>
+    </ul>
+
+    <h3>10. Use and Secure Your Drive</h3>
+    <p>Your encrypted drive will now appear in File Explorer. Copy files to it like normal. When done, click
+      <strong>Dismount</strong> in VeraCrypt to lock it again.
+    </p>
+
+    <h2>You're Done</h2>
+    <p>Now your data is encrypted and protected, even if the drive is lost or stolen. Share this guide and check out
+      more content on cybersecurity, encryption, and digital privacy.</p>
+
+    <p><strong>Stay safe, and stay secure.</strong></p>
+
+    <footer>
+      <a href="index.html"><button>&larr; Back to Home</button></a>
+      <p>Follow me:
+        <a href="https://x.com/Cyberleaktv" target="_blank">Twitter/X</a> |
+        <a href="https://youtube.com/@cyberleaktv?si=3SVGCUW7ToIaYZ72" target="_blank">YouTube</a>
+      </p>
+    </footer>
+  </main>
+
+</body>
+
+</html>
